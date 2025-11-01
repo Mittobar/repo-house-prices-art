@@ -1,0 +1,15 @@
+#Aca colocamos todo lo que no queremos que se meta en el repositorio, 
+#por default cookie mete muchas cosas, sim ebargo las eliminamos
+#cuando son carpetas va entre / y cuando son archivos el .y nombre de archivo
+#tambien podemos separar entre la carpeta /carpeta/otra carpeta/
+# Data
+/data/
+
+#Modelos
+/models/
+
+#env
+.env 
+
+#references
+/references/
