@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/mitch/repo-house-prices-art/notebooks/mlruns/0/2ebf31460848469f88e2c964cc96cc23/artifacts
+end_time: 1763499435783
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 2ebf31460848469f88e2c964cc96cc23
+run_uuid: 2ebf31460848469f88e2c964cc96cc23
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763499435746
+status: 3
+tags: []
+user_id: mitch
