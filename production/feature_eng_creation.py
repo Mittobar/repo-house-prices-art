@@ -1,4 +1,4 @@
-"""Script para la creación de caracteristicas del modelo
+"""Descrption: Script para la creación de caracteristicas del modelo
 
     Returns:_type_: None
     Creator: Jennifer Tobar
@@ -7,14 +7,13 @@
     Email: 18004720@galileo.edu
     """
 
-import pandas as pd
-import numpy as np
+import logging
 import joblib
+import pandas as pd
 
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error, r2_score
 
 from feature_engine.imputation import MeanMedianImputer, CategoricalImputer
 from feature_engine.encoding import CountFrequencyEncoder
@@ -22,7 +21,6 @@ from feature_engine.transformation import LogTransformer
 from feature_engine.selection import DropFeatures
 
 # cargamos operadores definidos por desarrollador
-import logging
 import operators
 
 logging.basicConfig(
@@ -164,31 +162,31 @@ def load_n_pre_data() -> (pd.DataFrame | pd.DataFrame):
     data_train['BsmtFullBath'] = data_train['BsmtFullBath'].astype('O')
 
     # split en train test.
-    X_train, X_test, y_train, y_test = train_test_split(data_train.drop(
+    x_train, _, y_train, _ = train_test_split(data_train.drop(
         ['Id', 'SalePrice'], axis=1), data_train['SalePrice'], test_size=0.30, random_state=2025)
 
-    return X_train, y_train
+    return x_train, y_train
 
 
 def create_n_config_preproc_pipeline(
-        X_train: pd.DataFrame,
+        x_train: pd.DataFrame,
         y_train: pd.DataFrame) -> Pipeline:
     """Funcion para crear y definir el pipeline de preprocesamiento
 
     Args:
-        X_train (pd.DataFrame): Features a los que les aplicaremos las transformaciones de preprocesamiento
+        X_train (pd.DataFrame): Features a los que aplicaremos transformaciones de preprocesamiento
         y_train (pd.DataFrame): Target del modelo
 
     Returns:
         Pipeline: Pipeline de preprocesamiento de scikit-learn
     """
-    all_features = set(X_train.columns)
-    FEATURES_TO_DROP = all_features.difference(FEATURES)
-    FEATURES_TO_DROP = list(FEATURES_TO_DROP)
+    all_features = set(x_train.columns)
+    features_to_drop = all_features.difference(FEATURES)
+    features_to_drop = list(features_to_drop)
 
     house_prices_data_pre_proc = Pipeline([
         # 0. Seleccion de features para el modelo
-        ('drop_features', DropFeatures(features_to_drop=FEATURES_TO_DROP)),
+        ('drop_features', DropFeatures(features_to_drop=features_to_drop)),
         # 1. Imputacion de variables categoricas
         ('cat_missing_imputation', CategoricalImputer(
             imputation_method='missing', variables=CATEGORICAL_VARS_WITH_NA_MISSING)),
@@ -225,46 +223,60 @@ def create_n_config_preproc_pipeline(
         ('Variable_scaler', MinMaxScaler())
     ])
 
-    house_prices_data_pre_proc.fit(X_train, y_train)
+    house_prices_data_pre_proc.fit(x_train, y_train)
     joblib.dump(house_prices_data_pre_proc,
                 '../models/house_prices_data_pre_proc_pipeline.pkl')
 
     return house_prices_data_pre_proc
 
 
-def save_procesed_data(X, y, str_df_name, house_prices_data_pre_proc):
-    X_transformed = house_prices_data_pre_proc.transform(X)
-    df_X_train_transformed = pd.DataFrame(data=X_transformed, columns=FEATURES)
-    y = y.reset_index()
+def save_procesed_data(
+        x_train: pd.DataFrame,
+        y_train: pd.DataFrame,
+        str_df_name: str,
+        house_prices_data_pre_proc: Pipeline) -> None:
+    """Aplica las transformaciones del pipeline al dataset para producir el dataset de entrenamiento
+
+    Args:
+      x_train (pd.DataFrame): Set de features para entrenamiento
+      y_train (pd.DataFrame): Set de valores de entrenamiento para el target del modelo
+      str_df_name (str): nombre con el que se guarda el archivo de datos preprocesados
+      house_prices_data_pre_proc (Pipeline): Objeto de pipeline pre-configurado
+    """
+    x_transformed = house_prices_data_pre_proc.transform(x_train)
+    df_x_train_transformed = pd.DataFrame(data=x_transformed, columns=FEATURES)
+    y_train = y_train.reset_index()
     df_transformed = pd.concat(
-        [df_X_train_transformed, y['SalePrice']], axis=1)
+        [df_x_train_transformed, y_train['SalePrice']], axis=1)
     df_transformed.to_csv(
         f"../data/interim/proc_{str_df_name}.csv",
         index=False)
 
 
-def main():
+def main() -> None:
+    """ Función principal del sceip para llamar a todos los steps del proceso.
+    """
     try:
         logging.info("✅Iniciando Preprocesamiento de Datos")
         print("✅Iniciando Preprocesamiento de Datos")
         # cargamos y configuramos datos de entrada
-        X_train, y_train = load_n_pre_data()
+        x_train, y_train = load_n_pre_data()
 
         logging.info("✅Datos Cargados y configurados correctamente")
         print("✅Datos Cargados y configurados correctamente")
 
         # creamos y configuramos el pipeline
-        pipeline = create_n_config_preproc_pipeline(X_train, y_train)
+        pipeline = create_n_config_preproc_pipeline(x_train, y_train)
 
         logging.info("✅Pipeline Creado y configurado correctamente")
         print("✅Pipeline Creado y configurado correctamente")
 
         # Guardamos datos preprocesador para el entrenamiento
-        save_procesed_data(X_train, y_train, 'data_train', pipeline)
+        save_procesed_data(x_train, y_train, 'data_train', pipeline)
         logging.info("✅Datos de Entrenamiento Guardados Correctamente")
         print("✅Datos de Entrenamiento Guardados Correctamente")
     except Exception as ex:
-        logging.error(f"⛔Error{ex}")
+        logging.error("Ocurrió un ValueError: %s", ex)
         print(f"⛔Error{ex}")
 
 
