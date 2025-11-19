@@ -40,3 +40,86 @@
 2025-11-01 21:11, INFO, RMSE Promedio del modelo SVR: -77786.61071235649
 2025-11-01 21:11, INFO, RMSE Promedio del modelo XGBOOST: -33655.16328125
 2025-11-01 21:11, INFO, Tiempo de entrenamiento 27.11628031730652, ENTRENAMIENTO
+2025-11-18 14:56, INFO, Iniciando Entrenamiento, ENTRENAMIENTO
+2025-11-18 14:56, INFO, RMSE Promedio del modelo LinearRegression: -33179.958081458135
+2025-11-18 14:57, INFO, RMSE Promedio del modelo RandomForestRegressor: -32847.3440719663
+2025-11-18 14:57, INFO, RMSE Promedio del modelo GradientBoostingRegressor: -33296.70329643786
+2025-11-18 14:57, INFO, RMSE Promedio del modelo SVR: -77786.61071235649
+2025-11-18 14:57, INFO, RMSE Promedio del modelo XGBOOST: -33655.16328125
+2025-11-18 14:57, INFO, Tiempo de entrenamiento 21.44406247138977, ENTRENAMIENTO
+2025-11-18 14:57, INFO, Iniciando Entrenamiento, ENTRENAMIENTO
+2025-11-18 14:57, INFO, RMSE Promedio del modelo LinearRegression: -33179.958081458135
+2025-11-18 14:57, INFO, RMSE Promedio del modelo RandomForestRegressor: -32847.3440719663
+2025-11-18 14:57, INFO, RMSE Promedio del modelo GradientBoostingRegressor: -33296.70329643786
+2025-11-18 14:57, INFO, RMSE Promedio del modelo SVR: -77786.61071235649
+2025-11-18 14:57, INFO, RMSE Promedio del modelo XGBOOST: -33655.16328125
+2025-11-18 14:57, INFO, Tiempo de entrenamiento 19.97300887107849, ENTRENAMIENTO
+2025-11-18 15:15, INFO, Iniciando Entrenamiento, ENTRENAMIENTO
+2025-11-18 15:15, INFO, RMSE Promedio del modelo LinearRegression: -33179.958081458135
+2025-11-18 15:15, INFO, RMSE Promedio del modelo RandomForestRegressor: -32847.3440719663
+2025-11-18 15:15, INFO, RMSE Promedio del modelo GradientBoostingRegressor: -33296.70329643786
+2025-11-18 15:15, INFO, RMSE Promedio del modelo SVR: -77786.61071235649
+2025-11-18 15:15, INFO, RMSE Promedio del modelo XGBOOST: -33655.16328125
+2025-11-18 15:15, INFO, Tiempo de entrenamiento 20.89122176170349, ENTRENAMIENTO
+2025-11-18 18:34, INFO, Iniciando Entrenamiento, ENTRENAMIENTO
+2025-11-18 18:34, INFO, RMSE Promedio del modelo LinearRegression: -33179.958081458135
+2025-11-18 18:34, INFO, RMSE Promedio del modelo RandomForestRegressor: -32847.3440719663
+2025-11-18 18:34, INFO, RMSE Promedio del modelo GradientBoostingRegressor: -33296.70329643786
+2025-11-18 18:34, INFO, RMSE Promedio del modelo SVR: -77786.61071235649
+2025-11-18 18:35, INFO, RMSE Promedio del modelo XGBOOST: -33655.16328125
+2025-11-18 18:35, INFO, Tiempo de entrenamiento 28.035855531692505, ENTRENAMIENTO
+2025-11-18 18:36, INFO, Iniciando Entrenamiento, ENTRENAMIENTO
+2025-11-18 18:36, INFO, RMSE Promedio del modelo LinearRegression: -33179.958081458135
+2025-11-18 18:36, INFO, RMSE Promedio del modelo RandomForestRegressor: -32847.3440719663
+2025-11-18 18:36, INFO, RMSE Promedio del modelo GradientBoostingRegressor: -33296.70329643786
+2025-11-18 18:36, INFO, RMSE Promedio del modelo SVR: -77786.61071235649
+2025-11-18 18:36, INFO, RMSE Promedio del modelo XGBOOST: -33655.16328125
+2025-11-18 18:36, INFO, Tiempo de entrenamiento 30.578900814056396, ENTRENAMIENTO
+2025-11-18 18:39, INFO, Iniciando Entrenamiento, ENTRENAMIENTO
+2025-11-18 18:39, INFO, RMSE Promedio del modelo LinearRegression: -33179.958081458135
+2025-11-18 18:39, INFO, RMSE Promedio del modelo RandomForestRegressor: -32847.3440719663
+2025-11-18 18:39, INFO, RMSE Promedio del modelo GradientBoostingRegressor: -33296.70329643786
+2025-11-18 18:39, INFO, RMSE Promedio del modelo SVR: -77786.61071235649
+2025-11-18 18:39, INFO, RMSE Promedio del modelo XGBOOST: -33655.16328125
+2025-11-18 18:39, INFO, Tiempo de entrenamiento 28.32243299484253, ENTRENAMIENTO
+2025-11-18 18:42, INFO, Iniciando Entrenamiento, ENTRENAMIENTO
+2025-11-18 18:42, INFO, RMSE Promedio del modelo LinearRegression: -33179.958081458135
+2025-11-18 18:42, INFO, RMSE Promedio del modelo RandomForestRegressor: -32847.3440719663
+2025-11-18 18:42, INFO, RMSE Promedio del modelo GradientBoostingRegressor: -33296.70329643786
+2025-11-18 18:42, INFO, RMSE Promedio del modelo SVR: -77786.61071235649
+2025-11-18 18:42, INFO, RMSE Promedio del modelo XGBOOST: -33655.16328125
+2025-11-18 18:42, INFO, Tiempo de entrenamiento 25.28745698928833, ENTRENAMIENTO
+2025-11-18 18:45, INFO, Iniciando Entrenamiento, ENTRENAMIENTO
+2025-11-18 18:45, INFO, RMSE Promedio del modelo LinearRegression: -33179.958081458135
+2025-11-18 18:45, INFO, RMSE Promedio del modelo RandomForestRegressor: -32847.3440719663
+2025-11-18 18:45, INFO, RMSE Promedio del modelo GradientBoostingRegressor: -33296.70329643786
+2025-11-18 18:45, INFO, RMSE Promedio del modelo SVR: -77786.61071235649
+2025-11-18 18:45, INFO, RMSE Promedio del modelo XGBOOST: -33655.16328125
+2025-11-18 18:45, INFO, Tiempo de entrenamiento 21.426997184753418, ENTRENAMIENTO
+2025-11-18 19:28, INFO, Iniciando Entrenamiento, ENTRENAMIENTO
+2025-11-18 19:29, INFO, Iniciando Entrenamiento, ENTRENAMIENTO
+2025-11-18 19:32, INFO, Iniciando Entrenamiento, ENTRENAMIENTO
+2025-11-18 19:33, INFO, Iniciando Entrenamiento, ENTRENAMIENTO
+2025-11-18 19:34, INFO, Iniciando Entrenamiento, ENTRENAMIENTO
+2025-11-18 19:34, INFO, RMSE del modelo linear_regression: 27598.031656400606, ENTRENAMIENTO
+2025-11-18 19:35, INFO, Iniciando Entrenamiento, ENTRENAMIENTO
+2025-11-18 19:35, INFO, RMSE del modelo linear_regression: 27598.031656400606, ENTRENAMIENTO
+2025-11-18 19:36, INFO, Iniciando Entrenamiento, ENTRENAMIENTO
+2025-11-18 19:36, INFO, RMSE del modelo linear_regression: 27598.031656400606, ENTRENAMIENTO
+2025-11-18 19:37, INFO, Iniciando Entrenamiento, ENTRENAMIENTO
+2025-11-18 19:38, INFO, RMSE del modelo linear_regression: 27598.031656400606, ENTRENAMIENTO
+2025-11-18 19:38, INFO, RMSE del modelo random_forest: 31289.667767527484, ENTRENAMIENTO
+2025-11-18 19:38, INFO, RMSE del modelo gradient_boosting: 28105.91144803937, ENTRENAMIENTO
+2025-11-18 19:38, INFO, Tiempo de entrenamiento 23.268925428390503, ENTRENAMIENTO
+2025-11-18 20:19, INFO, Iniciando Entrenamiento, ENTRENAMIENTO
+2025-11-18 20:19, INFO, RMSE del modelo linear_regression: 27598.03, ENTRENAMIENTO
+2025-11-18 20:20, INFO, Iniciando Entrenamiento, ENTRENAMIENTO
+2025-11-18 20:20, INFO, RMSE del modelo linear_regression: 27598.03, ENTRENAMIENTO
+2025-11-18 20:20, INFO, RMSE del modelo random_forest: 31145.0, ENTRENAMIENTO
+2025-11-18 20:20, INFO, RMSE del modelo gradient_boosting: 28208.28, ENTRENAMIENTO
+2025-11-18 20:20, INFO, Tiempo de entrenamiento 18.291098594665527, ENTRENAMIENTO
+2025-11-18 20:20, INFO, Iniciando Entrenamiento, ENTRENAMIENTO
+2025-11-18 20:20, INFO, RMSE del modelo linear_regression: 27598.03, ENTRENAMIENTO
+2025-11-18 20:21, INFO, RMSE del modelo random_forest: 30215.64, ENTRENAMIENTO
+2025-11-18 20:21, INFO, RMSE del modelo gradient_boosting: 28105.59, ENTRENAMIENTO
+2025-11-18 20:21, INFO, Tiempo de entrenamiento 19.611931324005127, ENTRENAMIENTO
